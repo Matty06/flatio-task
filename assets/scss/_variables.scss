@@ -1,0 +1,57 @@
+// === PATHS ===
+$img-path: '/assets/imgaes';
+
+// === FONT SIZES ===
+$fs-base:             1.5rem;
+
+// === COLORS ===
+$black:               #000;
+$black-01:            rgba(0, 0, 0, .1);
+$black-85:            rgba(0, 0, 0, .85);
+$dark-blue:           #0a1221;
+$white:               #fff;
+$light-green:         #00bfbf;
+$pink:                #ff4081; 
+$border-color:        #f0f0f0;      
+
+// === BREAKPOINTS ===
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 425px;
+
+// === COMPONENTS ===
+// BUTTONS
+$button-padding-x-1:     2rem;
+$button-padding-x-2:     3rem;
+$button-padding-y:       2rem;
+$button-padding:         $button-padding-y $button-padding-x-2 $button-padding-y $button-padding-x-1;
+
+$button-padding-md-y:    1.5rem;
+$button-padding-md-x-1:  1.5rem;
+$button-padding-md-x-2:  3rem;
+$button-md-padding:      $button-padding-md-y $button-padding-md-x-2 $button-padding-md-y $button-padding-md-x-1;
+
+$button-border:          0.1rem solid rgba(10, 18, 33, 0.2);
+$button-radius:          0.3rem;
+
+// MODAL
+$modal-dialog-padding-x: 1.5rem;
+$modal-dialog-padding-y: 3rem;
+$modal-dialog-padding:   $modal-dialog-padding-y $modal-dialog-padding-x;
+
+$modal-width:            104.8rem;     
+$modal-shadow:           0 1.2rem 2.4rem $black-01;  
+$modal-padding-x:        3rem; 
+$modal-padding-sm-x:     2rem;   
+$modal-header-border:    0.1rem solid $border-color;         
+
+// NAV TABS
+$nav-tabs-border-color:  $border-color;
+$nav-link-active-color:  $pink;
+$nav-link-padding-x:     1rem;
+$nav-tab-margin:         calc(-#{$modal-padding-x} - #{$nav-link-padding-x});
+$nav-tab-margin-sm:      calc(-#{$modal-padding-sm-x} - #{$nav-link-padding-x});
+
+
+// === OTHER ===
+$transition:             all .2s ease-in-out;

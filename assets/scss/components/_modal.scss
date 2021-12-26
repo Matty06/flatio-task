@@ -1,0 +1,115 @@
+.modal {
+    $self: &;
+
+    &-dialog {
+        overflow: hidden;
+
+        @include mq-min($screen-sm) {
+            max-width: $modal-width;
+        }
+
+        &-wrapper {
+            padding: $modal-dialog-padding;
+        }
+    }
+
+    &-content {
+        border-radius: 0.5rem;
+        border: none;
+        box-shadow: $modal-shadow;
+
+        &--cities {
+            position: absolute;
+            transform: translateX(-100%);
+            @include size(100%);
+            transition: $transition;
+
+            #{$self}-header {
+                border: $modal-header-border;
+                padding-bottom: 3rem;
+            }
+
+            #{$self}-title {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin-right: 1.5rem;
+                    transition: $transition;
+                }
+
+                @include hover-focus-active {
+                    svg {
+                        transform: translateX(-0.3rem);
+                    }
+                }
+            }
+
+            &.show {
+                transform: translateX(0);
+                transition: $transition;
+            }
+        }
+    }
+
+    &-header {
+        border: none;
+        padding: $modal-padding-x $modal-padding-x 1rem;
+
+        @include mq-max($screen-sm) {
+            padding: $modal-padding-sm-x; 
+        }        
+        
+        .btn-close {
+            opacity: .15;
+            margin-right: 0;
+            transition: $transition;
+
+            @include hover-focus-active {
+                opacity: .3;
+            }
+        }
+    }
+
+    &-title,
+    &-footer__close {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.9rem;
+    }
+
+    &-title {
+        color: $black-85;
+    }
+
+    &-body {
+        padding: $modal-padding-x;
+    }
+
+    &-footer {
+        border-top: none;
+        padding: 3.5rem $modal-padding-x 2.5rem;
+
+        &__close {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none; 
+            text-transform: uppercase;
+            color: $light-green;
+            transition: $transition;
+ 
+            @include hover-focus-active {
+                color: darken($light-green, 5%);
+            }   
+        }
+    }
+
+    &-body,
+    &-footer {
+        @include mq-max($screen-sm) {
+            padding: $modal-padding-sm-x;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.nav {
+    $self: &;
+    margin: 0 $nav-tab-margin;
+    padding: 0 $modal-padding-x;
+
+    @include mq-max($screen-sm) {
+        margin: 0 $nav-tab-margin-sm;
+        padding: 0 $modal-padding-sm-x;
+    }
+
+    &-item {
+        #{$self}-link {
+            padding: 0.5rem $nav-link-padding-x 0.85rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $black-85;
+            border: none;
+            
+            @include hover-focus-active
+             {
+                color: $nav-link-active-color;
+            }
+
+            &.active {
+                color: $nav-link-active-color;
+                background-color: inherit;
+            }
+        }
+    }
+}
+
+.nav-tabs {
+    border-bottom-color: $nav-tabs-border-color;
+}
+
+.tab-content {
+    margin-top: 2rem;
+}
+

@@ -1,0 +1,13 @@
+.btn-light-green {
+    margin: auto;
+    font-size: 1.5rem;
+    background: $light-green;
+    color: $white;
+    transition: $transition;
+	animation: wobble 0.8s both;
+
+    @include hover-focus-active {
+        background: darken($light-green, 10%);
+        color: $white;
+    }
+}

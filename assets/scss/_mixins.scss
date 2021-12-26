@@ -1,0 +1,24 @@
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin mq-max($breakpoint) {
+    @media all and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin mq-min($breakpoint) {
+    @media all and (min-width: $breakpoint) {
+        @content;
+    }
+}

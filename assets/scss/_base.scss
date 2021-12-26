@@ -1,0 +1,12 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    font-size: $fs-base;
+    font-family: 'Proxima Nova';
+}
